@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Green Oracle</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🌿 THE GREEN ORACLE</h1>
+<p>Smart Plant Disease Detection</p>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Analyze Plant</button>
+</form>
+
+{% if result %}
+<h2>Diagnosis Result</h2>
+<p><b>Status:</b> {{ result[0] }}</p>
+<p><b>Description:</b> {{ result[1] }}</p>
+<p><b>Treatment:</b> {{ result[2] }}</p>
+<p><b>Prevention:</b> {{ result[3] }}</p>
+{% endif %}
+
+</body>
+</html>
